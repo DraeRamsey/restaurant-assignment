@@ -5,7 +5,9 @@
 
 // variables
 $primary-color-lite: #E7E7E7; // grey-white
-$accent-color: #ff9900;
+$accent-color: #ff9900; //orange
+$glass-white: #ffffff73; //transparent white
+$glass-black: #000000e3; //transparent black
 
 $cursive-font:'Shadows Into Light', cursive;
 $subheading: 'Raleway', sans-serif;
@@ -66,63 +68,64 @@ $subheading: 'Raleway', sans-serif;
       box-sizing: border-box;
     }
 
-//this is to test how the site functions without rellax.js, for progressive enhancement
-    // *{
-    //    transform: translate(0) !important;
-    //  }
 
-
-
-
-// nav
 .navigation-sub{
+  transition: all ease-in-out 0.3s;
+  background-color: $glass-white;
   position: absolute;
   width:100%;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  border-bottom: 2px solid #ff5f02;
+  @include flexCenter(row);
+  border-bottom: 3px solid $accent-color;
+  min-height: 2em;
 
-  img{
-    filter: invert(99%) sepia(0%) saturate(7485%) hue-rotate(170deg) brightness(109%) contrast(106%);
-    width: 85px;
-    padding: 10px 10px 40px 10px;
-
-  }
-
-  img:hover, .svg-active{
-    filter: invert(58%) sepia(44%) saturate(1894%) hue-rotate(1deg) brightness(102%) contrast(106%);
-  }
-}
-
-// testing
-.nav-item{
-font-family: $subheading;
-text-decoration: none;
-color: white;
-padding: 10px;
-transition: .3s;
-}
-
-
-// .nav-item:hover, .active{
-//   color: $accent-color;
-//   text-decoration: underline;
-//
-// }
-
-
-
-.active{
-  background-color: $accent-color;
+  .nav-item{
+  text-align: center;
+  // width: 100%;
+  color: white;
+  font-family: $subheading;
+  text-decoration: none;
   font-weight: 600;
+  // color: black;
+  padding: 14px;
+  transition: .3s;
+  margin:0px;
+  font-size: 18px;
+
+  }
+
+
+  // img{
+  //   filter: invert(99%) sepia(0%) saturate(7485%) hue-rotate(170deg) brightness(109%) contrast(106%);
+  //   width: 85px;
+  //   padding: 10px 10px 40px 10px;
+  //
+  // }
+  //
+  // img:hover, .svg-active{
+  //   filter: invert(58%) sepia(44%) saturate(1894%) hue-rotate(1deg) brightness(102%) contrast(106%);
+  // }
+
+
 }
 
 
-//testing
 
+
+
+.nav-item:hover:not(.active):hover {
+  background-color: #ffffff33;
+}
+
+ .active{
+  background-color: $accent-color;
+
+}
 
 // nav
+
+#content{
+  height:100%;
+}
 
   #hero-section  {
      @include section("../imgs/hero-img.png", 80%, 50px);
@@ -139,6 +142,21 @@ transition: .3s;
       @include flexCenter(row);
  }
 
+ #contact-section{
+   @include section("../imgs/hero-img.png", 100%, 50px);
+   @include flexCenter(column);
+ }
+
+ #menu-section{
+      @include section("../imgs/menu.png", 100%, 0);
+      @include flexCenter(row);
+      padding: 90px 0px 90px 0px;
+
+      img{
+        border-radius: 15px;
+        width: 60%;
+      }
+ }
 footer{
   min-height: 40%;
   background-color: black;
@@ -146,10 +164,11 @@ footer{
 
 }
 
+
 .icon2, a{
   z-index:50;
   cursor: pointer;
-  margin: 5px;
+  // margin: 5px;
   height: 60px;
 
 }
@@ -179,7 +198,7 @@ footer{
 
 
 .btn{
-  @include btn(0.45em 2em,#000000bd, 38px)
+  @include btn(0.45em 2em,$glass-black, 38px)
 }
 
 .btn-lite{
@@ -265,7 +284,7 @@ h4{
 
 @media screen and (max-width: 1023px) {
 
-#about-section, #vision-section, #hero-section{
+#about-section, #vision-section, #hero-section, #menu-section, #contact-section{
   flex-direction: column;
   background-position: top
 }
@@ -284,20 +303,46 @@ h4{
 
 
 .navigation-sub{
-  // display: none;
+
+   // these commented styles are for if I would like a hamburger menu instea, but with only three nav items I may not need it...
+   //  background-color: $glass-black;
+   //  @include flexCenter(column);
+   //  border-bottom: none;
+   //  min-height: 100%;
+   // display: none;
+
+    .nav-item{
+      font-size: 24px;
+      width: 100%;
+
+    }
+
 
 }
 
-h1{
-//  font-size: 200px;
+#menu-section img{
+
+       width: 90%;
+       border-radius: 0px;
+
 }
+// these commented styles are for if I would like a hamburger menu instea, but with only three nav items I may not need it...
+// .active{
+//   background-color: transparent;
+//   color: $accent-color
+// }
+
 
 .sub-heading{
   text-align: center;
 }
 
-.hero-container{
-    @include flexCenter(column);
+// .hero-container{
+//     @include flexCenter(column);
+// }
+
+#hero-section{
+  padding-top: 90px;
 }
 
 }
@@ -308,9 +353,9 @@ h1{
    and (max-height : 653px) {
 
 
-     .nav-item{
-       padding: 5px;
-     }
+     // .nav-item{
+     //   padding: 5px;
+     // }
 
 
 }

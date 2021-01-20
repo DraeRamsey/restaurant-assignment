@@ -1,0 +1,30 @@
+{
+  "name": "restaurant-assignment",
+  "version": "1.0.0",
+  "description": "assigment for Odin Project: webpack and modules ",
+  "main": "index.js",
+  "dependencies": {
+    "node-bin-setup": "^1.0.6",
+    "node": "^10.12.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.16.0",
+    "webpack-cli": "^4.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "JavaScript",
+    "CSS",
+    "SASS",
+    "Webpack",
+    "Modules",
+    "Web",
+    "Design",
+    "Web",
+    "Development"
+  ],
+  "author": "Drae Ramsey",
+  "license": "ISC"
+}

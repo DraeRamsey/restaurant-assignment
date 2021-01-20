@@ -69,7 +69,7 @@ $subheading: 'Raleway', sans-serif;
     }
 
 
-.navigation-sub{
+.navigation-container{
   transition: all ease-in-out 0.3s;
   background-color: $glass-white;
   position: absolute;
@@ -78,7 +78,8 @@ $subheading: 'Raleway', sans-serif;
   border-bottom: 3px solid $accent-color;
   min-height: 2em;
 
-  .nav-item{
+#nav-contact, #nav-menu, #nav-home{
+    cursor: pointer;
   text-align: center;
   // width: 100%;
   color: white;
@@ -112,7 +113,7 @@ $subheading: 'Raleway', sans-serif;
 
 
 
-.nav-item:hover:not(.active):hover {
+#nav-contact:hover, #nav-menu:hover, #nav-home:hover:not(.active):hover {
   background-color: #ffffff33;
 }
 
@@ -123,32 +124,34 @@ $subheading: 'Raleway', sans-serif;
 
 // nav
 
-#content{
-  height:100%;
+#content, #main{
+  min-height:100%;
 }
 
+
+
   #hero-section  {
-     @include section("../imgs/hero-img.png", 80%, 50px);
+     @include section("../imgs/hero-img.png", 80vh, 50px);
      @include flexCenter(column);
   }
 
   #about-section{
-     @include section("../imgs/about-section.png", 100%, 0);
+     @include section("../imgs/about-section.png", 100vh, 0);
       @include flexCenter(row);
  }
 
  #vision-section{
-      @include section("../imgs/vision-section.png", 100%, 0);
+      @include section("../imgs/vision-section.png", 100vh, 0);
       @include flexCenter(row);
  }
 
  #contact-section{
-   @include section("../imgs/hero-img.png", 100%, 50px);
+   @include section("../imgs/hero-img.png", 100vh, 50px);
    @include flexCenter(column);
  }
 
  #menu-section{
-      @include section("../imgs/menu.png", 100%, 0);
+      @include section("../imgs/menu.png", 100vh, 0);
       @include flexCenter(row);
       padding: 90px 0px 90px 0px;
 
@@ -161,6 +164,10 @@ footer{
   min-height: 40%;
   background-color: black;
   @include flexCenter(column);
+
+  p{
+    padding: 10px;
+  }
 
 }
 
@@ -302,7 +309,7 @@ h4{
   }
 
 
-.navigation-sub{
+.navigation-container{
 
    // these commented styles are for if I would like a hamburger menu instea, but with only three nav items I may not need it...
    //  background-color: $glass-black;
@@ -311,7 +318,7 @@ h4{
    //  min-height: 100%;
    // display: none;
 
-    .nav-item{
+    #nav-contact, #nav-menu, #nav-home{
       font-size: 24px;
       width: 100%;
 

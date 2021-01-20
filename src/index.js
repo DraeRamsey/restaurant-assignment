@@ -1,13 +1,34 @@
 // npx webpack
 // npx webpack --watch
+'use strict';
 console.log("boops");
 
-var hamburger = document.getElementById('hamburger');
+import pageLoad from "./modules/page-load.js"
+// import homeLoad "./modules/page-load.js"
+//import loadMenu ""
+//import loadContact ""
 
-hamburger.addEventListener('click', function(){
-  this.
-})
 
+
+
+
+let init = () => {
+  pageLoad();
+  //homeLoad
+  //nav event
+}
+
+init();
+
+
+
+
+// var hamburger = document.getElementById('hamburger');
+//
+// hamburger.addEventListener('click', function(){
+//   this.
+// })
+//
 
 // var hamburger = document.getElementById('hamburger')
 // undefined

@@ -45,8 +45,8 @@ let createFooter = () => {
 
   content_container.className = "content-container";
   footer_p.innerHTML = "This is a fictional restaurant website made to complete an Odin Project assignment. This assigment was for the npm, modules, and webpack lesson. The menu items are borrowed from Tapa Bar in Victoria B.C.";
-  author_p.innerHTML = "made by drae";
-  github_a.href = "https://github.com/DraeRamsey";
+  author_p.innerHTML = "made by drae, click below to view assignment details";
+  github_a.href = "https://github.com/DraeRamsey/restaurant-assignment";
   github_a.target = "_blank";
   github_img.src = "imgs/github2.png";
   github_img.className = "icon2";

@@ -71,7 +71,7 @@ $subheading: 'Raleway', sans-serif;
 
 .navigation-container{
   transition: all ease-in-out 0.3s;
-  background-color: $glass-white;
+  background-color: $glass-black;
   position: absolute;
   width:100%;
   @include flexCenter(row);
@@ -112,15 +112,17 @@ $subheading: 'Raleway', sans-serif;
 
 
 
-
-#nav-contact:hover, #nav-menu:hover, #nav-home:hover:not(.active):hover {
+//apply this style too all tabs except for the one that is active
+#nav-contact:hover:not(.active):hover, #nav-menu:hover:not(.active):hover, #nav-home:hover:not(.active):hover {
   background-color: #ffffff33;
 }
+
 
  .active{
   background-color: $accent-color;
 
 }
+
 
 // nav
 
@@ -131,7 +133,7 @@ $subheading: 'Raleway', sans-serif;
 
 
   #hero-section  {
-     @include section("../imgs/hero-img.png", 80vh, 50px);
+     @include section("../imgs/hero-img.png", 100vh, 50px);
      @include flexCenter(column);
   }
 
@@ -146,7 +148,7 @@ $subheading: 'Raleway', sans-serif;
  }
 
  #contact-section{
-   @include section("../imgs/hero-img.png", 100vh, 50px);
+   @include section("../imgs/contact.png", 100vh, 50px);
    @include flexCenter(column);
  }
 

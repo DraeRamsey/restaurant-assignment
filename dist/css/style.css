@@ -14,7 +14,7 @@ body {
 
 .navigation-container {
   transition: all ease-in-out 0.3s;
-  background-color: #ffffff73;
+  background-color: #000000e3;
   position: absolute;
   width: 100%;
   display: flex;
@@ -35,7 +35,7 @@ body {
     margin: 0px;
     font-size: 18px; }
 
-#nav-contact:hover, #nav-menu:hover, #nav-home:hover:not(.active):hover {
+#nav-contact:hover:not(.active):hover, #nav-menu:hover:not(.active):hover, #nav-home:hover:not(.active):hover {
   background-color: #ffffff33; }
 
 .active {
@@ -48,7 +48,7 @@ body {
   background-image: url("../imgs/hero-img.png");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 80vh;
+  min-height: 100vh;
   padding: 50px;
   display: flex;
   justify-content: center;
@@ -78,7 +78,7 @@ body {
   flex-direction: row; }
 
 #contact-section {
-  background-image: url("../imgs/hero-img.png");
+  background-image: url("../imgs/contact.png");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;

@@ -1,3 +1,5 @@
+'use strict';
+
 let content = document.querySelector("#content")
 
 let createNav = () => {
@@ -42,7 +44,7 @@ let createFooter = () => {
   let github_img = document.createElement('img');
 
   content_container.className = "content-container";
-  footer_p.innerHTML = "This is a fictional restaurant website made to complete an Odin Project assignment. Thanks for stopping by!";
+  footer_p.innerHTML = "This is a fictional restaurant website made to complete an Odin Project assignment. This assigment was for the npm, modules, and webpack lesson. The menu items are borrowed from Tapa Bar in Victoria B.C.";
   author_p.innerHTML = "made by drae";
   github_a.href = "https://github.com/DraeRamsey";
   github_a.target = "_blank";
@@ -54,11 +56,8 @@ let createFooter = () => {
   content_container.appendChild(author_p);
   content_container.appendChild(github_a);
   github_a.appendChild(github_img);
-
   content.appendChild(footer)
-
 }
-
 
 function pageLoad(){
    createNav();

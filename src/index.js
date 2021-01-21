@@ -16,7 +16,6 @@ let navigate = () => {
 home.addEventListener("click", homeLoad);
 menu.addEventListener("click", menuLoad);
 contact.addEventListener("click", contactLoad);
-
 }
 
 

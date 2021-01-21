@@ -1,4 +1,4 @@
-# restaurant-assignment aka Leoni's Tapas: Part 2
+# Restaurant Assignment aka Leoni's Tapas: Part 2
 
  Page viewable here: https://draeramsey.github.io/restaurant-assignment/
 

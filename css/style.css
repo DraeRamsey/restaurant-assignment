@@ -55,28 +55,6 @@ body {
   align-items: center;
   flex-direction: column; }
 
-#about-section {
-  background-image: url("../imgs/about-section.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row; }
-
-#vision-section {
-  background-image: url("../imgs/vision-section.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row; }
-
 #contact-section {
   background-image: url("../imgs/contact.png");
   background-repeat: no-repeat;
@@ -121,59 +99,6 @@ footer {
 .icon2:hover {
   transform: scale(1.09); }
 
-.spacer-section {
-  min-height: 35%;
-  background-color: #E7E7E7;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; }
-
-#spacer1 {
-  background-image: url("../imgs/tapas2.jpg"); }
-
-#spacer2 {
-  background-image: url("../imgs/tapas3.png"); }
-
-.btn {
-  display: inline-block;
-  color: #FFFFFF;
-  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
-  margin-top: 20px;
-  border-radius: 0.12em;
-  text-decoration: none;
-  font-family: helvetica, sans-serif;
-  font-weight: 300;
-  font-size: 19px;
-  text-align: center;
-  transition: all ease-in-out 0.3s;
-  padding: 0.45em 2em;
-  background-color: #000000e3;
-  line-height: 38px; }
-
-.btn-lite {
-  display: inline-block;
-  color: #FFFFFF;
-  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
-  margin-top: 20px;
-  border-radius: 0.12em;
-  text-decoration: none;
-  font-family: helvetica, sans-serif;
-  font-weight: 300;
-  font-size: 19px;
-  text-align: center;
-  transition: all ease-in-out 0.3s;
-  padding: 0.2em 2em;
-  background-color: #ff9900;
-  line-height: 50px; }
-
-.btn-lite:hover, .btn:hover {
-  color: #000000;
-  background-color: #FFFFFF; }
-
 h1 {
   color: #E7E7E7;
   text-align: center;
@@ -194,12 +119,6 @@ h4 {
   font-size: 45px;
   font-weight: 100; }
 
-.accent-heading {
-  font-family: "Shadows Into Light", cursive;
-  color: black;
-  font-size: 50px;
-  font-weight: bold; }
-
 .content-container {
   width: 40%;
   margin: 20px;
@@ -209,42 +128,18 @@ h4 {
   align-items: center;
   flex-direction: column; }
 
-.img-container {
-  background-color: #af3f3f;
-  padding: 0px; }
-
-.icon {
-  width: 85px;
-  padding: 10px 10px 40px 10px; }
-
-.supporting-img {
-  width: 450px;
-  margin-top: -50px; }
-
-.vision-image {
-  margin-left: -150px; }
-
-.about-image {
-  margin-right: -150px; }
-
 p {
   text-align: center;
   font-size: 18px; }
 
 /******************* mobile media queries ********************/
 @media screen and (max-width: 1023px) {
-  #about-section, #vision-section, #hero-section, #menu-section, #contact-section {
+  #hero-section, #menu-section, #contact-section {
     flex-direction: column;
     background-position: top; }
 
-  #spacer1 {
-    background-position: center; }
-
   .content-container {
     width: 85%; }
-
-  .img-container {
-    display: none; }
 
   .navigation-container #nav-contact, .navigation-container #nav-menu, .navigation-container #nav-home {
     font-size: 24px;
@@ -259,9 +154,5 @@ p {
 
   #hero-section {
     padding-top: 90px; } }
-/* Galaxy Fold */
-/* IPhone 5/SE */
-/*  general iPad */
-/* ipad pro */
 
 /*# sourceMappingURL=style.css.map */

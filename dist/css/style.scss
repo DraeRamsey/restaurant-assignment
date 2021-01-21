@@ -1,0 +1,239 @@
+// get css filters https://codepen.io/sosuke/pen/Pjoqqp
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&family=Shadows+Into+Light&display=swap');
+
+
+// variables
+$primary-color-lite: #E7E7E7; // grey-white
+$accent-color: #ff9900; //orange
+$glass-white: #ffffff73; //transparent white
+$glass-black: #000000e3; //transparent black
+
+$cursive-font:'Shadows Into Light', cursive;
+$subheading: 'Raleway', sans-serif;
+
+
+// mixins
+@mixin flexCenter($direction){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin section($image_path, $min-height, $padding){
+  background-image: url($image_path);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: $min-height;
+  padding: $padding;
+
+}
+
+// resets
+  body, html {
+    height: 100%;
+    color: white;
+
+  }
+
+  body {
+    font: 100% / 1.5 poppins;
+    font-weight: 300;
+  }
+
+
+    * {
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+    }
+
+//nav
+.navigation-container{
+  transition: all ease-in-out 0.3s;
+  background-color: $glass-black;
+  position: absolute;
+  width:100%;
+  @include flexCenter(row);
+  border-bottom: 3px solid $accent-color;
+  min-height: 2em;
+
+#nav-contact, #nav-menu, #nav-home{
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  font-family: $subheading;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 14px;
+  transition: .3s;
+  margin:0px;
+  font-size: 18px;
+  }
+
+  // im going to keep this here in case I want to bring the svg back
+  // img{
+  //   filter: invert(99%) sepia(0%) saturate(7485%) hue-rotate(170deg) brightness(109%) contrast(106%);
+  //   width: 85px;
+  //   padding: 10px 10px 40px 10px;
+  //
+  // }
+  //
+  // img:hover, .svg-active{
+  //   filter: invert(58%) sepia(44%) saturate(1894%) hue-rotate(1deg) brightness(102%) contrast(106%);
+  // }
+}
+
+//applies style too all tabs except for the one that is active
+#nav-contact:hover:not(.active):hover, #nav-menu:hover:not(.active):hover, #nav-home:hover:not(.active):hover {
+  background-color: #ffffff33;
+}
+
+ .active{
+  background-color: $accent-color;
+
+}
+// end nav
+// general
+#content, #main{
+  min-height:100%;
+}
+
+
+  #hero-section  {
+     @include section("../imgs/hero-img.png", 100vh, 50px);
+     @include flexCenter(column);
+  }
+
+
+ #contact-section{
+   @include section("../imgs/contact.png", 100vh, 50px);
+   @include flexCenter(column);
+ }
+
+ #menu-section{
+      @include section("../imgs/menu.png", 100vh, 0);
+      @include flexCenter(row);
+      padding: 90px 0px 90px 0px;
+
+      img{
+        border-radius: 15px;
+        width: 60%;
+      }
+ }
+
+footer{
+  min-height: 40%;
+  background-color: black;
+  @include flexCenter(column);
+
+  p{
+    padding: 10px;
+  }
+
+}
+
+.icon2, a{
+  z-index:50;
+  cursor: pointer;
+  height: 60px;
+
+}
+
+.icon2:hover{
+  transform: scale(1.09);
+}
+
+  h1 {
+    color: $primary-color-lite;
+    text-align: center;
+    font-family: $cursive-font;
+    font-size: 120px;
+    line-height: 1.3;
+  }
+
+h4 {
+  color: $primary-color-lite;
+  text-align: center;
+  font-family: $cursive-font;
+  line-height: 1.1;
+  font-size: 100px;
+}
+
+
+  .sub-heading{
+     color:$primary-color-lite;
+      font-family: $subheading;
+      font-size: 45px;
+      font-weight: 100;
+  }
+
+  .content-container{
+    width: 40%;
+    margin: 20px;
+    padding: 20px;
+    @include flexCenter(column);
+  }
+
+
+  p{
+    text-align: center;
+    font-size: 18px;
+  }
+
+
+  /******************* mobile media queries ********************/
+
+@media screen and (max-width: 1023px) {
+
+ #hero-section, #menu-section, #contact-section{
+  flex-direction: column;
+  background-position: top
+}
+
+
+.content-container {
+    width: 85%;
+  }
+
+
+.navigation-container{
+
+   // these commented styles are for if I would like a hamburger menu instead, but with only three nav items I may not want it...
+   //  background-color: $glass-black;
+   //  @include flexCenter(column);
+   //  border-bottom: none;
+   //  min-height: 100%;
+   // display: none;
+
+    #nav-contact, #nav-menu, #nav-home{
+      font-size: 24px;
+      width: 100%;
+    }
+
+
+}
+
+#menu-section img{
+       width: 90%;
+       border-radius: 0px;
+
+}
+
+// these commented styles are for if I would like a hamburger menu instea, but with only three nav items I may not want it...
+// .active{
+//   background-color: transparent;
+//   color: $accent-color
+// }
+
+.sub-heading{
+  text-align: center;
+}
+
+
+#hero-section{
+  padding-top: 90px;
+}
+
+}

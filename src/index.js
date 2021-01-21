@@ -1,7 +1,6 @@
 // npx webpack
 // npx webpack --watch
 'use strict';
-console.log("boops");
 
 import pageLoad from "./modules/page-load.js"
 import homeLoad from "./modules/home-load.js"
@@ -17,7 +16,6 @@ home.addEventListener("click", homeLoad);
 menu.addEventListener("click", menuLoad);
 contact.addEventListener("click", contactLoad);
 }
-
 
 let init = () => {
   pageLoad();

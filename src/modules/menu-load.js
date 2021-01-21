@@ -5,7 +5,6 @@ import toggleTab from "./toggle.js"
 function menuLoad(){
   let main = document.querySelector("#main");
   main.textContent = "";
-  console.log("menu here");
 
   let menu_section = document.createElement("section");
   let menu_img = document.createElement("img");

@@ -3,7 +3,6 @@
 let content = document.querySelector("#content")
 
 let createNav = () => {
-  console.log("nav here")
    let nav_bar = document.createElement("div");
    let nav_item_home = document.createElement("p");
    let nav_item_menu = document.createElement("p");
@@ -27,7 +26,6 @@ let createNav = () => {
 }
 
 let createMain = () => {
-console.log("main created");
 let main = document.createElement("main");
 main.id = ("main");
 content.appendChild(main)
@@ -35,7 +33,6 @@ content.appendChild(main)
 
 
 let createFooter = () => {
-  console.log("footer created");
   let footer = document.createElement("footer");
   let content_container = document.createElement("div");
   let footer_p = document.createElement("p");

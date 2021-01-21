@@ -5,7 +5,6 @@ import toggleTab from "./toggle.js"
 function contactLoad(){
   let main = document.querySelector("#main");
   main.textContent = "";
-  console.log("home here")
 
   let contact_section = document.createElement("section");
   let heading = document.createElement("h1");

@@ -1,6 +1,6 @@
 # restaurant-assignment aka Leoni's Tapas: Part 2
 
- Page viewable here: [github pages incoming]
+ Page viewable here: https://draeramsey.github.io/restaurant-assignment/
 
   The aim of this project is to gain more practice with:
    DOM manipulation, npm, webpack, and modules.

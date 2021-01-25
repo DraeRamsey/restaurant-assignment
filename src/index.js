@@ -1,5 +1,3 @@
-// npx webpack
-// npx webpack --watch
 'use strict';
 
 import pageLoad from "./modules/page-load.js"

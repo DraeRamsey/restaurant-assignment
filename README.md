@@ -7,7 +7,7 @@
 
   The goal here was to create a basic three page restaurant site with tabbed browsing. Dynamically render all of the sites content using vanilla JavaScript, and separate the functions/page loads into modules.
 
-  Coming from a React background I'd say going back to DOM manipulation with pure vanilla JavaScript was challenging... and slow. If I ever have a similar project in the future, I'd say using a SPA framework is the way to go, but it's fun going vanilla nonetheless.
+  Coming from a React background I'd say going back to DOM manipulation with pure vanilla JavaScript was... slow. If I ever have a similar project in the future, I'd say using a SPA framework is the way to go, but it's fun going vanilla nonetheless.
 
  #### Keywords
  **Sass, HTML, CSS, Webpack, Vanilla JavaScript, Responsive, separation of concerns, DOM Manipulation**
